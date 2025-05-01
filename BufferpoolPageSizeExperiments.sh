@@ -11,7 +11,7 @@ sudo mount /dev/nvme0n1p1 /mnt/myssd
 sudo cp testfile3 /mnt/myssd/testfile
 
 #This next portion is the actual experiment it should be run within each policy folder
-#Important to note that for consistent results set -n parameter to a specific value once the disk page size is large enough
+#Important to note that for consistent results set -n parameter to a specific value such as 22 specific once the disk page size is large enough
 
 #Testing with ACE
 x=100000
