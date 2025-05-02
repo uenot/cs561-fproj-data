@@ -1,0 +1,11 @@
+#!/bin/bash
+
+script_path=$(dirname "$0")
+binary_path="$script_path/buffermanager"
+testfile_path="$script_path/testfile3"
+
+mount /dev/nvme0n1p1 /mnt/myssd
+
+cp "$testfile_path" /mnt/myssd/testfile
+
+"$binary_path" -f /mnt/myssd/testfile -b 15 -x 100000 -a $1 -k 8
