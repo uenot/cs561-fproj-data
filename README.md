@@ -14,5 +14,5 @@
        sudo mkdir -p /mnt/myssd
        sudo mount /dev/nvme0n1p1 /mnt/myssd```
     - Run this portion from within the policy folder(the directory where you created the initial testfile) in the ACE directory in order to copy the testfile directly into the mounted SSD
-       ```sudo cp testfile3 /mnt/myssd/testfile```
+      `sudo cp testfile3 /mnt/myssd/testfile`
 
