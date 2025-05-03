@@ -8,11 +8,11 @@
 5. You should now be able to cd into ACE-codebase/Simulation where you can run each experiment with its respective eviction policy.
 6. It should be noted that in each experiment we are creating a partition on the SSD in order to perform writes directly to it, but this step does not need to be repeated across multiple experiments. Refer to this portion specifically:
     - Inside the FEMU emulator run the following before proceeding with the experiment to create a testfile within the SSD
-       `sudo parted /dev/nvme0n1 -- mklabel gpt`
-       `sudo parted /dev/nvme0n1 -- mkpart primary ext4 0% 100%`
-       `sudo mkfs.ext4 /dev/nvme0n1p1`
-       `sudo mkdir -p /mnt/myssd`
-       `sudo mount /dev/nvme0n1p1 /mnt/myssd`
+       ```sudo parted /dev/nvme0n1 -- mklabel gpt
+       sudo parted /dev/nvme0n1 -- mkpart primary ext4 0% 100%
+       sudo mkfs.ext4 /dev/nvme0n1p1
+       sudo mkdir -p /mnt/myssd
+       sudo mount /dev/nvme0n1p1 /mnt/myssd
     - Run this portion from within the policy folder(the directory where you created the initial testfile) in the ACE directory in order to copy the testfile directly into the mounted SSD
-       `sudo cp testfile3 /mnt/myssd/testfile`
+       sudo cp testfile3 /mnt/myssd/testfile```
 
